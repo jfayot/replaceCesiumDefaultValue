@@ -5,7 +5,7 @@ This tool allows to handle migration from `Cesium.defaultValue` to `??` javascri
 It worked as is for the [Cesium](https://github.com/CesiumGS/cesium) project, but you might need to adapt it for your personal use case. Some known limitations are:
 
 - comments inside `defaultValue` calls,
-- multiple intricate calls to `defaultValue`,
+- more than 2 intricate calls to `defaultValue`,
 - works only for ES6 `imports`, not for `require`,
 - ...
 
