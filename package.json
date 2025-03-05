@@ -1,0 +1,16 @@
+{
+  "name": "replace-cesium-default-value",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "glob": "^11.0.1"
+  }
+}
