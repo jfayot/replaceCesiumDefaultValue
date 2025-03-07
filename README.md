@@ -1,8 +1,8 @@
 # replaceCesiumDefaultValue
 
-This tool allows to handle migration from `Cesium.defaultValue` to `??` javascript nullish coalescing operator (see Cesium Issue [#11674](https://github.com/CesiumGS/cesium/issues/11674) and PR [#12507](https://github.com/CesiumGS/cesium/pull/12507)).
+This tool allows automating the migration from `Cesium.defaultValue` to javascript's nullish coalescing operator `??` (see Cesium Issue [#11674](https://github.com/CesiumGS/cesium/issues/11674) and PR [#12507](https://github.com/CesiumGS/cesium/pull/12507)).
 
-It worked as is for the [Cesium](https://github.com/CesiumGS/cesium) project, but you might need to adapt it for your personal use case. Some known limitations are:
+It worked as is on [Cesium](https://github.com/CesiumGS/cesium) repository, but you may need to adapt it for your personal use case. Some known limitations are:
 
 - comments inside `defaultValue` calls,
 - more than 2 intricate calls to `defaultValue`,
