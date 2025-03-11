@@ -9,7 +9,7 @@ function replaceInFile(
 ) {
   let count = 0;
   let content = fs.readFileSync(filePath, "utf8");
-  if (content.indexOf("DefaultValues.") === -1)
+  if (content.indexOf("Frozen.") === -1)
     if (isReplacementPattern) replacement = "$1";
     else replacement = "";
   let initialContent = content + "";
@@ -50,7 +50,7 @@ export default function updateImports(projectDir: string) {
   count += replaceInFiles(
     `${projectDir}/**/*.js`,
     searched,
-    `import DefaultValues from "./DefaultValues.js";
+    `import Frozen from "./Frozen.js";
 `);
 
   searched = `import defaultValue from "../Core/defaultValue.js";
@@ -58,7 +58,7 @@ export default function updateImports(projectDir: string) {
   count += replaceInFiles(
     `${projectDir}/**/*.js`,
     searched,
-    `import DefaultValues from "../Core/DefaultValues.js";
+    `import Frozen from "../Core/Frozen.js";
 `);
 
   searched = `import defaultValue from "../../Core/defaultValue.js";
@@ -66,7 +66,7 @@ export default function updateImports(projectDir: string) {
   count += replaceInFiles(
     `${projectDir}/**/*.js`,
     searched,
-    `import DefaultValues from "../../Core/DefaultValues.js";
+    `import Frozen from "../../Core/Frozen.js";
 `);
 
   searched = `import defaultValue from "../../../Core/defaultValue.js";
@@ -74,7 +74,7 @@ export default function updateImports(projectDir: string) {
   count += replaceInFiles(
     `${projectDir}/**/*.js`,
     searched,
-    `import DefaultValues from "../../../Core/DefaultValues.js";
+    `import Frozen from "../../../Core/Frozen.js";
 `);
 
   searched = `import defaultValue from "../../../../Core/defaultValue.js";
@@ -82,7 +82,7 @@ export default function updateImports(projectDir: string) {
   count += replaceInFiles(
     `${projectDir}/**/*.js`,
     searched,
-    `import DefaultValues from "../../../../Core/DefaultValues.js";
+    `import Frozen from "../../../../Core/Frozen.js";
 `);
 
   searched = `  defaultValue,
@@ -90,7 +90,7 @@ export default function updateImports(projectDir: string) {
   count += replaceInFiles(
     `${projectDir}/**/*.js`,
     searched,
-    `  DefaultValues,
+    `  Frozen,
 `);
 
   searched = `import { defaultValue } from "@cesium/engine";
@@ -98,7 +98,7 @@ export default function updateImports(projectDir: string) {
   count += replaceInFiles(
     `${projectDir}/**/*.js`,
     searched,
-    `import { DefaultValues } from "@cesium/engine";
+    `import { Frozen } from "@cesium/engine";
 `);
 
   searched = /(import .*)(defaultValue, )/;
@@ -113,7 +113,7 @@ export default function updateImports(projectDir: string) {
   count += replaceInFiles(
     `${projectDir}/**/*.js`,
     searched,
-    `\$1, DefaultValues`,
+    `\$1, Frozen`,
     true
   );
 

@@ -37,7 +37,7 @@ function replaceInFile(filePath: string, searched: string) {
     if (secondArg.endsWith(","))
       secondArg = secondArg.slice(0, secondArg.length - 1);
     if (secondArg === "[]" && firstArg.includes("options."))
-      secondArg = "DefaultValues.EMPTY_ARRAY";
+      secondArg = "Frozen.EMPTY_ARRAY";
     const replacement = `((${firstArg}) ?? (${secondArg})) ${comment}`;
 
     content = replaceFromIndex(content, foundIndex, toReplace, replacement);

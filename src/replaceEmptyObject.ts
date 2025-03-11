@@ -39,14 +39,14 @@ export default function replaceEmptyObject(projectDir: string) {
   count += replaceInFiles(
     `${projectDir}/**/*.js`,
     searched,
-    "DefaultValues.EMPTY_OBJECT"
+    "Frozen.EMPTY_OBJECT"
   );
 
   searched = "Cesium.defaultValue.EMPTY_OBJECT(";
   count += replaceInFiles(
     `${projectDir}/**/*.html`,
     searched,
-    "Cesium.DefaultValues.EMPTY_OBJECT"
+    "Cesium.Frozen.EMPTY_OBJECT"
   );
 
   console.log(
