@@ -11,7 +11,6 @@ export function getFiles(pattern: string): string[] {
         p.isNamed("Build") ||
         p.isNamed("node_modules") ||
         p.isNamed("Assets") ||
-        p.isNamed("GltfPipeline") ||
         p.isNamed("ThirdParty"),
     },
   });
